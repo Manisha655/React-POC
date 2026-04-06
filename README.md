@@ -1,30 +1,113 @@
 # React-POC
+
 - This repo is for practicing React from fundamentals.
 
+## Day-1
+
 # What is Emmet?
+
 - Emmet is essential web developer toolkit which allows to type short shortcuts and then convert it into boiler plte HTML and CSS code.
 
 # Difference between a Library and Framework?
-- Library and framework,both are written by third party but they differ in inversion of control. Library provide control to developer they can call use any functionality as per their use but in franework control is not with developer. Framework tells developer where you should write code. 
+
+- Library and framework,both are written by third party but they differ in inversion of control. Library provide control to developer they can call use any functionality as per their use but in franework control is not with developer. Framework tells developer where you should write code.
 
 # What is CDN? Why do we use it?
+
 - Content Delivery Network (CDN) is a geographically distributed groups of server that caches content such as images, HTML files and videos cose to end users. By serving data from the nearest edge server rather than a distant central origin server. CDNs significantly reduces latency, increase loading time and prevent server overloads.
 
 # Why is React known as React?
-- React is JS Library. It is known as React because it allows developer to  react to change application's data and state and to update the user Interface in a declarative and efficient manner. 
+
+- React is JS Library. It is known as React because it allows developer to react to change application's data and state and to update the user Interface in a declarative and efficient manner.
 
 # What is crossorigin in script tag?
-- crossorigin attribute allows to load files from different origin  other than application. It enable cross origin resource sharing.
+
+- crossorigin attribute allows to load files from different origin other than application. It enable cross origin resource sharing.
 
 # What is diference between React and ReactDOM
+
 - React handles component based architecture, state management and the virtual DOM. It defines how UI should look like but doesn't know where to show it.
 - ReactDOM provide method like createRoot and render to physically inject React component into HTML page.
 
 # What is difference between react.development.js and react.production.js files via CDN?
+
 - react.development.js is only for development purpose for developers to code,debug and test. This is unminified file so it is heavy files
 - react.production.js are optimised file so it take less time to load and best for production ready app and end user. It doesn't give detailed error messages.
 
 # What is async and defer?
+
 - async attribute in script tag allows HTML parser to parse HTML in parallel while it will load script from network once script is available in browser HTML parser will stop and code will execute first after execution only HTML parser will parse HTML.
 - defer attribute allows HTML parser to parse HTML in parallel while it will load script from network once parser parses all of it's HTML then only script will execute.
 
+## Day - 2
+
+# What is `NPM`?
+
+- NPM is package mananger which manages package. It allow sharing dependencies, allows to use code from dependencies. It create package.json on npm install which stores configuration of all dependencies and package-lock.json which stores exact version of configuration of dependancies
+
+# What is `Parcel/Webpack`? Why do we need it?
+
+- They are bundlers. We need bundlers to make our app production ready. It optimise, minify our code, cache our code as well. There are lot of things they do licke caching, removing unwanted codes using Tree shacking algo.
+
+# What is `.parcel-cache`?
+
+- This is a folder which get created during giving build. It cache our application and apply HMR(Hot Module Replacement ) which use File watching algorithm(written in c++ ) to track chnages and reload once we save our application and take less time for every build.
+
+# What is `npx` ?
+
+- npx is executing command. It executes the packages.
+
+# What is difference between `dependencies` vs `devDependencies`
+
+- Dependencies are those packages which we need in production or deployment
+- devDependencies are those which we need during development time.
+
+# What is Tree Shaking?
+
+- Tree shacking is the process of removing unwanted code from application during time of optimization.
+
+# What is Hot Module Replacement?
+
+- It means that parcel will keep track of all files in the application and whenever any file is changed and saved parcel will reload application. These things are done by File watching algorithm (written in C++)
+
+# - List down your favourite 5 superpowers of Parcel.
+
+- Tree Shaking
+- Hot Module Replacement
+- Optimization
+- Minification
+- Caching while development
+
+# What is `.gitignore`? What should we add and not add into it?
+
+- It is a folder which stores what git should ignore at time of commiting. We should add those files which are bulky as well as which can regenerate like node_modules, .parcel_cache and dist folders.
+
+# What is the difference between `package.json` and `package-lock.json`
+
+- package.json is configuration files of all dependancies which store near version of dependancies.
+- package.lock.json is configuration files which store exact version of dependancies.
+
+# Why should I not modify `package-lock.json`?
+
+- Because it keeps track of exact version of dependancies. If there is different version in development and prod. Application may break in production due to different version of dependancies
+
+# What is `node_modules` ? Is it a good idea to push that on git?
+
+- node_modules is folder which store code of all dependencies and then it's transitive dependancies as well. All folder inside node_modules have their own package.json. node_modules allow sharing of code in the application through dependancies.
+
+# What is the `dist` folder?
+
+- dist folder contain optimised and minified code of your application. It get created at time of build and make your code production ready.
+
+# What is `browserlists`?
+
+- It tells your code work will definitely work on which version of browser. It basically give cross brwoser compatibility.
+
+**# TODO: Read about dif bundlers: vite, webpack, parcel**
+
+# ^ - caret and ~ - tilda
+
+- ^ caret will automatically upgrade version of your dependency if there is minor update of your dependency ex ^8.2.3 -> ^8.2.4
+- ~ tilda will automatically upgrade major version of your dependancy ex- ~8.2.3 -> ~9.2.3
+
+**# TODO: Read about Script types in html (MDN Docs)**
