@@ -1,0 +1,27 @@
+.title {
+    background-color: #451e07;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: -5px 4px 20px 2px gray;
+}
+
+img,
+input,
+button {
+    margin: 10px;
+}
+
+.title input,
+.title button {
+    background-color: #ce9e3f;
+    font-family: sans-serif;
+    border: 1px solid #b35f0cf7;
+    border-radius: 5px;
+}
+
+.title button {
+    padding: 5px;
+    color: black;
+    font-weight: bold;
+}

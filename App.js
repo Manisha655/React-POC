@@ -1,15 +1,26 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import './App.css'
+import logo from './logo.png'
 
-const parent = React.createElement('div', { id: 'parent' }, [
-  React.createElement('div', { id: 'child1' }, [
-    React.createElement('h1', {}, 'I am H1 tag'),
-    React.createElement('h2', {}, 'I am h2 tag')
-  ]),
-  React.createElement('div', { id: 'child2' }, [
-    React.createElement('h1', {}, 'I am H1 tag'),
-    React.createElement('h2', {}, 'I am h2 tag')
-  ])
-])
+// const header = React.createElement('div', { className: 'title' }, [
+//   React.createElement('h1', {}, 'Heading 1'),
+//   React.createElement('h2', {}, 'Heading2'),
+//   React.createElement('h3', {}, 'Heading3')
+// ])
+const Logo = () => <img src='https://do6gp1uxl3luu.cloudfront.net/banner+and+logos/name.webp' alt='Logo' width={103} height={33} />
+const SearchComponent = () => (
+  <input type='search' name='search' placeholder='search....' />
+)
+const UserSignIn = () => <button>Sign In </button>
+const Header = () => {
+  return (
+    <div className='title'>
+      <Logo />
+      <SearchComponent />
+      <UserSignIn />
+    </div>
+  )
+}
 const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(parent)
+root.render(<Header />)
