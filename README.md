@@ -108,6 +108,41 @@
 - {<TitleComponent/>} It will render component with no children. This is standard way to render any component 
 - {<TitleComponent></TitleComponent>} It will render component with allowing children.
 
+# Is JSX mandatory for React?
+- No it's not mandatory but adding it is like syntactical sugar for createElement. whenever you don't want to set up compilation in build. whatever we are writing in jsx we can achieve in pure js code as well.
+
+# Is ES6 mandatory for React?
+- NO, we can write React code without es6 as well.Fir classes we can use createReactClass api from react.
+
+# How can I write comments in JSX?
+- we can write comment in {/* This is comment */} or {//this is comment}
+
+# What is <React.Fragment></React.Fragment> and <></> ?
+- we use this when we don't want to add extra node. It group element together without adding any extra wrapper node.
+
+# What is Virtual DOM?
+- Virtaul DOM is programming concept where virtual or ideal representation of Real DOM is kept in memory.And it is synced with real DOM with libraries such as ReactDOM. This process is called as REconcilation.
+
+# What is Reconciliation in React?
+- It is the process where whenever state and props changes it create a new virtual DOM in memory and using diffing algorithm it calculates what are the minimal changes needs to apply to real DOM and then it patches those changes to real DOM. It's good standard to use unique keys to the lists so that it can calculate correctly what are the list needs to be modified, removed or added. If you are using indexes it can result in unexpected result cause indexes can change.
+
+# What is React Fiber?
+- ## TODO- need to learn in detail
+
+# Why we need keys in React? When do we need keys in React?
+- We need key in React to give unique identification to the component. Using key can improve performance and decrease unnecessary re-rendering and unexpected UI.
+
+# Can we use index as keys in React?
+- we can, it's better than having  no keys but when we are modifing our list it will bring disaster. suppose we have given index and if we are adding some data in middle it will change index of all component  and due to this it will re render all list.
+
+# What is props in React? Ways to
+- Props basically stands for properties which contain data in object form. This can be passed from one component to other. props are immutable. we can either simply get it in child component through props object or we can destructure it and use it.
+
+# What is a Config Driven UI ?
+- Config driven UI is user interface which is build on some data and for that particular data or config we need to show particularly that UI.
+
+
+
 
 
 
